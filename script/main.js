@@ -1,5 +1,6 @@
+console.log([document])
 
-const tarjetasHome = document.getElementById("cards")
+const section__cards = document.querySelector("cards")
 
 let tarjetasCargadas = ""
 
@@ -20,7 +21,7 @@ data.events.forEach(evento => tarjetasCargadas +=
       </div>
     </div> ` );
 
-    tarjetasHome.innerHTML = tarjetasCargadas;
+    section__cards.innerHTML = tarjetasCargadas;
 
     let llamarTarjetas = []
 
@@ -42,6 +43,7 @@ data.events.forEach(evento => tarjetasCargadas +=
           <div class="card-body">
             <h5 class="card-title">${evento.name} </h5>
             <p class="card-text">${evento.description} </p>
+            <a href=".details.html?id=${evento._id}" class="card-link">Details</a>
           </div>
         </div>
       </div>
